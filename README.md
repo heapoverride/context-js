@@ -44,15 +44,9 @@ contextMenu.install();
 ```
 
 # Properties
-### text
-Menu item's text
-### hotkey
-Menu item's hotkey text
-### color
-Menu item's custom text color (hexadecimal notation, #RRGGBB)
-### disabled
-A boolean value that when set to true will mark this item disabled (`onclick` is not called if item is disabled)
-### onclick
-A function that is called when user clicks on this item
-### subitems
-Array of menu item's subitems (`onclick` is ignored if item has subitems)
+**text** - Menu item's text
+**hotkey** - Menu item's hotkey text
+**color** - Menu item's custom text color (hexadecimal notation, #RRGGBB)
+**disabled** - A boolean value that when set to true will mark this item disabled (`onclick` is not called if item is disabled)
+**onclick** - A function that is called when user clicks on this item
+**subitems** - Array of menu item's subitems (`onclick` is ignored if item has subitems)
