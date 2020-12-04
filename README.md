@@ -17,3 +17,36 @@ Link Context.js to your HTML code
 ```html
 <script src="./context/context.js"></script>
 ```
+
+# Example
+```js
+const clickHandler = e => {
+    e.label.innerText = e.label.innerText.split('').reverse().join('');
+    e.data.text = e.label.innerText;
+    e.handled = true;
+}
+
+const contextMenu = new ContextMenu(document.body, [
+    {text: 'Back', hotkey: 'Alt+Left arrow', disabled: true, onclick: clickHandler},
+    {text: 'Forward', hotkey: 'Alt+Right arrow', disabled: true, onclick: clickHandler},
+    {text: 'Reload', hotkey: 'Ctrl+R', onclick: clickHandler},
+    null,
+    {text: 'Save as...', hotkey: 'Ctrl+S', onclick: clickHandler},
+    {text: 'Print...', hotkey: 'Ctrl+P', onclick: clickHandler},
+    {text: 'Cast...', onclick: clickHandler},
+    {text: 'Translate to English', onclick: clickHandler},
+    null,
+    {text: 'View page source', hotkey: 'Ctrl+U', onclick: clickHandler},
+    {text: 'Inspect', hotkey: 'Ctrl+Shift+I', onclick: clickHandler},
+]);
+```
+
+# Properties
+### text
+Menu item's text
+### hotkey
+Menu item's hotkey text
+### color
+Menu item's text color (hexadecimal notation, #RRGGBB)
+### subitems
+Collection of menu item's subitems (`onclick` is ignored if item has subitems)
