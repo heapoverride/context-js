@@ -47,6 +47,6 @@ Menu item's text
 ### hotkey
 Menu item's hotkey text
 ### color
-Menu item's text color (hexadecimal notation, #RRGGBB)
+Menu item's custom text color (hexadecimal notation, #RRGGBB)
 ### subitems
 Array of menu item's subitems (`onclick` is ignored if item has subitems)
