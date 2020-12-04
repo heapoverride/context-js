@@ -50,3 +50,11 @@ contextMenu.install();
 **disabled** - A boolean value that when set to true will mark this item disabled (`onclick` is not called if item is disabled)\
 **onclick** - A function that is called when user clicks on this item\
 **subitems** - Array of menu item's subitems (`onclick` is ignored if item has subitems)\
+
+# Default skins
+### chrome-dark.css
+![chrome-bright](https://i.ibb.co/SxjSWdK/image.png)
+### chrome-bright.css
+![chrome-bright](https://i.ibb.co/bzB3sPb/image.png)
+### hackerman.css
+![chrome-bright](https://i.ibb.co/nwtjHqx/image.png)
