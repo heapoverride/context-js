@@ -52,10 +52,23 @@ contextMenu.install();
 **subitems** - Array of menu item's subitems (`onclick` is ignored if item has subitems)
 
 # Methods (intended for public use)
-**show(** x, y **)**\
-**hide()**\
-**install()**\
-**uninstall()**
+```js
+/* Show ContextMenu at specific position */
+ContextMenu.show(x, y)
+```
+```js
+/* Hide this ContextMenu DOM element and it's child elements */
+ContextMenu.hide()
+```
+```js
+/* Add event listeners for this ContextMenu object */
+ContextMenu.install()
+```
+```js
+/* Remove event listeners and DOM elements 
+   associated with this ContextMenu object */
+ContextMenu.uninstall()
+```
 
 # Default skins
 ### chrome-dark.css
