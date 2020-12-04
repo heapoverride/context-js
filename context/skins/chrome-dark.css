@@ -26,23 +26,23 @@
 }
 
 .context .context-item:hover {
-    background: #4B4C4F !important;
+    background: #4B4C4F;
 }
 
 .context .context-item:hover .context-item-hotkey {
-    color: #fff !important;
+    color: #fff;
 }
 
 .context .disabled {
-    color: #878B90 !important;
+    color: #878B90;
 }
 
 .context .disabled:hover {
-    background: inherit !important;
+    background: inherit;
 }
 
 .context .disabled:hover .context-item-hotkey {
-    color: #878B90 !important;
+    color: #878B90;
 }
 
 .context .separator {
