@@ -49,4 +49,4 @@ Menu item's hotkey text
 ### color
 Menu item's text color (hexadecimal notation, #RRGGBB)
 ### subitems
-Collection of menu item's subitems (`onclick` is ignored if item has subitems)
+Array of menu item's subitems (`onclick` is ignored if item has subitems)
