@@ -6,7 +6,7 @@ Context.js is a context-menu library for web and of course written in JavaScript
 
 # Installation
 ### Step 1
-Simply copy **context** folder to your project directory.
+Copy **context** folder to your project directory.
 ### Step 2
 Link CSS styles to your HTML code
 ```html
