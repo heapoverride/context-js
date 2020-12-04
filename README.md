@@ -49,7 +49,13 @@ contextMenu.install();
 **color** - Menu item's custom text color (hexadecimal notation, #RRGGBB)\
 **disabled** - A boolean value that when set to true will mark this item disabled (`onclick` is not called if item is disabled)\
 **onclick** - A function that is called when user clicks on this item\
-**subitems** - Array of menu item's subitems (`onclick` is ignored if item has subitems)\
+**subitems** - Array of menu item's subitems (`onclick` is ignored if item has subitems)
+
+# Methods (intended for public use)
+**show(** x, y **)**\
+**hide()**\
+**install()**\
+**uninstall()**
 
 # Default skins
 ### chrome-dark.css
