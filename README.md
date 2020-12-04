@@ -39,6 +39,8 @@ const contextMenu = new ContextMenu(document.body, [
     {text: 'View page source', hotkey: 'Ctrl+U', onclick: clickHandler},
     {text: 'Inspect', hotkey: 'Ctrl+Shift+I', onclick: clickHandler},
 ]);
+
+contextMenu.install();
 ```
 
 # Properties
