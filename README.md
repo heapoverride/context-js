@@ -51,7 +51,7 @@ contextMenu.install();
 **onclick** - A function that is called when user clicks on this item\
 **subitems** - Array of menu item's subitems (`onclick` is ignored if item has subitems)
 
-# Methods (intended for public use)
+# Public methods
 ```js
 /* Show ContextMenu at specific position */
 ContextMenu.show(x, y)
