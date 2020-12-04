@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Context.js</title>
+        <link rel="stylesheet" href="./styles.css" type="text/css" />
+        <link rel="stylesheet" href="./context/skins/hackerman.css" type="text/css" />
+    </head>
+    <body>
+
+        <div class="no centered container">
+            <div class="watermark">
+				Context.js
+			</div>
+        </div>
+
+        <script src="./context/context.js"></script>
+        <script>
+            /*const clickHandler = e => {
+                e.label.innerText = e.label.innerText.split('').reverse().join('');
+                e.data.text = e.label.innerText;
+                e.handled = true;
+            }
+
+            const contextMenu = new ContextMenu(document.body, [
+                {text: 'Back', hotkey: 'Alt+Left arrow', disabled: true, onclick: clickHandler},
+                {text: 'Forward', hotkey: 'Alt+Right arrow', disabled: true, onclick: clickHandler},
+                {text: 'Reload', hotkey: 'Ctrl+R', onclick: clickHandler},
+                null,
+                {text: 'Save as...', hotkey: 'Ctrl+S', onclick: clickHandler},
+                {text: 'Print...', hotkey: 'Ctrl+P', onclick: clickHandler},
+                {text: 'Cast...', onclick: clickHandler},
+                {text: 'Translate to English', onclick: clickHandler},
+                null,
+                {text: 'View page source', hotkey: 'Ctrl+U', onclick: clickHandler},
+                {text: 'Inspect', hotkey: 'Ctrl+Shift+I', onclick: clickHandler},
+            ]);
+            
+            contextMenu.install();*/
+
+
+            /*const author = document.getElementById('author');
+
+            const clickHandler = e => {
+                author.innerText = e.data.text;
+            };
+
+            const contextMenu = new ContextMenu(document.body, [
+                {text: 'GitHub', onclick: clickHandler},
+                {text: 'Twitter', onclick: clickHandler}
+            ]);
+
+            contextMenu.install();*/
+
+
+            const contextMenu = new ContextMenu(document.body, [
+                {text: 'Information Gathering', hotkey: '❯', subitems: [
+                    {text: 'DNS Analysis', hotkey: '❯', subitems: [
+                        {text: 'dnsenum'},
+                        {text: 'dnsrecon'},
+                        {text: 'fierce'}
+                    ]},
+                    {text: 'IDS/IPS Identification', hotkey: '❯', subitems: [
+                        {text: 'lbd'},
+                        {text: 'wafw00f'}
+                    ]},
+                    {text: 'Live Host Identification', hotkey: '❯', subitems: [
+                        {text: 'arping'},
+                        {text: 'fping'},
+                        {text: 'hping3'},
+                        {text: 'masscan'},
+                        {text: 'thcping6'}
+                    ]},
+                    {text: 'Network & Port Scanners', hotkey: '❯', subitems: [
+                        {text: 'masscan'},
+                        {text: 'nmap'}
+                    ]},
+                    {text: 'OSINT Analysis', hotkey: '❯', subitems: [
+                        {text: 'maltego'},
+                        {text: 'theharvester'}
+                    ]},
+                    {text: 'Route Analysis', hotkey: '❯', subitems: [
+                        {text: 'netdiscover'},
+                        {text: 'netmask'}
+                    ]},
+                    {text: 'SMB Analysis', hotkey: '❯', subitems: [
+                        {text: 'enum4linux'},
+                        {text: 'nbtscan'},
+                        {text: 'smbmap'}
+                    ]},
+                    {text: 'SMTP Analysis', hotkey: '❯', subitems: [
+                        {text: 'swaks'}
+                    ]},
+                    {text: 'SNMP Analysis', hotkey: '❯', subitems: [
+                        {text: 'onesixtyone'},
+                    ]},
+                    {text: 'SSL Analysis', hotkey: '❯', subitems: [
+                        {text: 'ssldump'},
+                        {text: 'sslh'},
+                        {text: 'sslcan'},
+                        {text: 'sslyze'}
+                    ]},
+                    {text: 'dmitry'},
+                    {text: 'ike-scan'},
+                    {text: 'maltego'},
+                    {text: 'netdiscover'},
+                    {text: 'nmap'},
+                    {text: 'recon-ng'},
+                    {text: 'sparta'}
+                ]},
+                {text: 'Vulnerability Analysis', hotkey: '❯', subitems: [
+                    {text: 'Fuzzing Tools', hotkey: '❯', subitems: [
+                        {text: 'spike-generic_chunked'},
+                        {text: 'spike-generic_listen_tcp'},
+                        {text: 'spike-generic_send_tcp'},
+                        {text: 'spike-generic_send_udp'},
+                    ]},
+                    {text: 'VoIP Tools', hotkey: '❯', subitems: [
+                        {text: 'voiphopper'},
+                    ]},
+                    {text: 'nikto'},
+                    {text: 'nmap'},
+                    {text: 'sparta'},
+                    {text: 'unix-privesc-check'},
+                ]},
+                {text: 'Click here!', onclick: e => {
+                    e.handled = true;
+                    e.label.innerText = 'Clicked!';
+                    e.data.text = e.label.innerText;
+                }}
+            ]);
+
+            contextMenu.install();
+        </script>
+    </body>
+</html>
