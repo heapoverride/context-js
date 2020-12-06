@@ -44,6 +44,9 @@
 
 .context .context-item-hotkey {
     float: right;
+}
+
+.context .has-subitems .context-item-hotkey {
     font-weight: bold;
 }
 
