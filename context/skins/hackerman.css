@@ -5,7 +5,7 @@
     left: 0px;
     min-width: 270px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #73ff00;
+    color: #878B90;
     background: rgba(0, 0, 0, 0.7);
     font-size: 9pt;
     border: 1px solid #333333;
@@ -25,26 +25,14 @@
     color: inherit;
 }
 
-.context .context-item:hover {
+.context .context-item {
+    color: #878B90;
+}
+
+.context .enabled.context-item:hover {
     background: #73ff00;
     color: #000;
     font-weight: bold;
-}
-
-.context .context-item:hover .context-item-hotkey {
-    color: #000;
-}
-
-.context .disabled {
-    color: #878B90 ;
-}
-
-.context .disabled:hover {
-    background: inherit;
-}
-
-.context .disabled:hover .context-item-hotkey {
-    color: #878B90;
 }
 
 .context .separator {
@@ -54,8 +42,11 @@
     border-top: 1px solid #454545;
 }
 
-.context-item-hotkey {
-    color: #73ff00;
-    font-weight: bold;
+.context .context-item-hotkey {
     float: right;
+    font-weight: bold;
+}
+
+.context .enabled.context-item {
+    color: #73ff00;
 }

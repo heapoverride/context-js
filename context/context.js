@@ -41,7 +41,7 @@ class ContextMenu {
 
     getMenuDom() {
         const menu = document.createElement('div');
-        menu.classList = 'context';
+        menu.classList.add('context');
 
         for (const item of this.items) {
             menu.appendChild(this.itemToDomEl(item));
@@ -62,14 +62,16 @@ class ContextMenu {
             item.style.cssText = `color: ${data.color}`;
         }
 
-        item.classList = 'context-item';
+        item.classList.add('context-item');
 
         const label = document.createElement('span');
         label.innerText = data.hasOwnProperty('text') ? data['text'].toString() : '';
         item.appendChild(label);
 
         if (data.hasOwnProperty('disabled') && data['disabled']) {
-            item.classList += ' disabled';
+            item.classList.add('disabled');
+        } else {
+            item.classList.add('enabled');
         }
 
         const hotkey = document.createElement('span');
@@ -100,6 +102,7 @@ class ContextMenu {
 
             this.submenus.push(menu);
 
+            item.classList.add('has-subitems');
             item.addEventListener('click', openSubItems);
             item.addEventListener('mousemove', openSubItems);
         } else {
