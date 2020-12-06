@@ -14,7 +14,6 @@
 
         <script src="./context/context.js"></script>
         <script>
-
             const skinActivator = e => {
                 const skin = document.getElementById('skin');
                 skin.setAttribute('href', `./context/skins/${e.data.value}.css`);
@@ -40,32 +39,8 @@
                     {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
                 ]}
             ]);
-            
-            contextMenu.install();
 
-
-            /*const author = document.getElementById('author');
-
-            const clickHandler = e => {
-                author.innerText = e.data.text;
-            };
-
-            const contextMenu = new ContextMenu(document.body, [
-                {text: 'GitHub'},
-                {text: 'Twitter'}
-            ]);
-
-            contextMenu.install();*/
-
-
-            
-            /*const skinActivator = e => {
-                const skin = document.getElementById('skin');
-                skin.setAttribute('href', `./context/skins/${e.data.value}.css`);
-                e.handled = true;
-            };
-
-            const contextMenu = new ContextMenu(document.body, [
+            /*const contextMenu = new ContextMenu(document.body, [
                 {text: 'Information Gathering', hotkey: '❯', subitems: [
                     {text: 'DNS Analysis', hotkey: '❯', subitems: [
                         {text: 'dnsenum'},
@@ -145,9 +120,9 @@
                     {text: 'Chrome Bright', value: 'chrome-bright', onclick: skinActivator},
                     {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
                 ]}
-            ]);
+            ]);*/
 
-            contextMenu.install();*/
+            contextMenu.install();
         </script>
     </body>
 </html>
