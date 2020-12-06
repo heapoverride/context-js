@@ -19,17 +19,17 @@
     user-select: none;
 }
 
-.context .context-item {
+.context .item {
     padding: 4px 19px;
     cursor: default;
     color: inherit;
 }
 
-.context .context-item:hover {
+.context .item:hover {
     background: #e3e3e3 !important;
 }
 
-.context .context-item:hover .context-item-hotkey {
+.context .item:hover .hotkey {
     color: #000 !important;
 }
 
@@ -41,7 +41,7 @@
     background: inherit !important;
 }
 
-.context .disabled:hover .context-item-hotkey {
+.context .disabled:hover .hotkey {
     color: #878B90 !important;
 }
 
@@ -52,7 +52,7 @@
     border-top: 1px solid #b3b3b3;
 }
 
-.context-item-hotkey {
+.hotkey {
     color: #878B90;
     float: right;
 }

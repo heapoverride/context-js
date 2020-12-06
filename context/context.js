@@ -12,9 +12,8 @@ class ContextMenu {
         this._onclick = e => {
             if (this.dom && e.target != this.dom && 
                 e.target.parentElement != this.dom && 
-                !e.target.classList.contains('context-item') && 
-                !e.target.classList.contains('context-item-hotkey') && 
-                !e.target.parentElement.classList.contains('context-item')) {
+                !e.target.classList.contains('item') && 
+                !e.target.parentElement.classList.contains('item')) {
                 this.hideAll();
             }
         };
@@ -62,7 +61,7 @@ class ContextMenu {
             item.style.cssText = `color: ${data.color}`;
         }
 
-        item.classList.add('context-item');
+        item.classList.add('item');
 
         const label = document.createElement('span');
         label.classList = 'label';
@@ -76,7 +75,7 @@ class ContextMenu {
         }
 
         const hotkey = document.createElement('span');
-        hotkey.classList = 'context-item-hotkey';
+        hotkey.classList = 'hotkey';
         hotkey.innerText = data.hasOwnProperty('hotkey') ? data['hotkey'].toString() : '';
         item.appendChild(hotkey);
 
