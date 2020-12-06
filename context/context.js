@@ -65,6 +65,7 @@ class ContextMenu {
         item.classList.add('context-item');
 
         const label = document.createElement('span');
+        label.classList = 'label';
         label.innerText = data.hasOwnProperty('text') ? data['text'].toString() : '';
         item.appendChild(label);
 
