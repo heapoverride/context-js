@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Context.js</title>
+        <title>Context.js demo</title>
         <link rel="stylesheet" href="./styles.css" type="text/css" />
         <link rel="stylesheet" href="./context/skins/chrome-dark.css" type="text/css" id="skin" />
     </head>
@@ -20,27 +20,7 @@
                 e.handled = true;
             };
 
-            const contextMenu = new ContextMenu(document.body, [
-                {text: 'Back', hotkey: 'Alt+Left arrow', disabled: true},
-                {text: 'Forward', hotkey: 'Alt+Right arrow', disabled: true},
-                {text: 'Reload', hotkey: 'Ctrl+R'},
-                null,
-                {text: 'Save as...', hotkey: 'Ctrl+S'},
-                {text: 'Print...', hotkey: 'Ctrl+P'},
-                {text: 'Cast...'},
-                {text: 'Translate to English'},
-                null,
-                {text: 'View page source', hotkey: 'Ctrl+U'},
-                {text: 'Inspect', hotkey: 'Ctrl+Shift+I'},
-                null,
-                {text: 'Skins', hotkey: '❯', subitems: [
-                    {text: 'Chrome Dark', value: 'chrome-dark', onclick: skinActivator},
-                    {text: 'Chrome Bright', value: 'chrome-bright', onclick: skinActivator},
-                    {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
-                ]}
-            ]);
-
-            /*const contextMenu = new ContextMenu(document.body, [
+            const kaliContextMenu = new ContextMenu(document.body, [
                 {text: 'Information Gathering', hotkey: '❯', subitems: [
                     {text: 'DNS Analysis', hotkey: '❯', subitems: [
                         {text: 'dnsenum'},
@@ -110,19 +90,41 @@
                     {text: 'sparta'},
                     {text: 'unix-privesc-check'},
                 ]},
+                null,
                 {text: 'Click here!', onclick: e => {
                     e.handled = true;
                     e.label.innerText = 'Clicked!';
                     e.data.text = e.label.innerText;
                 }},
-                {text: 'Skins', hotkey: '', subitems: [
+                {text: 'Skins', hotkey: '❯', subitems: [
                     {text: 'Chrome Dark', value: 'chrome-dark', onclick: skinActivator},
                     {text: 'Chrome Bright', value: 'chrome-bright', onclick: skinActivator},
                     {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
                 ]}
-            ]);*/
+            ]);
+            
+            const chromeContextMenu = new ContextMenu(document.body, [
+                {text: 'Back', hotkey: 'Alt+Left arrow', disabled: true},
+                {text: 'Forward', hotkey: 'Alt+Right arrow', disabled: true},
+                {text: 'Reload', hotkey: 'Ctrl+R'},
+                null,
+                {text: 'Save as...', hotkey: 'Ctrl+S'},
+                {text: 'Print...', hotkey: 'Ctrl+P'},
+                {text: 'Cast...'},
+                {text: 'Translate to English'},
+                null,
+                {text: 'View page source', hotkey: 'Ctrl+U'},
+                {text: 'Inspect', hotkey: 'Ctrl+Shift+I'},
+                null,
+                {text: 'Kali tools', hotkey: '❯', submenu: kaliContextMenu},
+                {text: 'Skins', hotkey: '❯', subitems: [
+                    {text: 'Chrome Dark', value: 'chrome-dark', onclick: skinActivator},
+                    {text: 'Chrome Bright', value: 'chrome-bright', onclick: skinActivator},
+                    {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
+                ]}
+            ]);
 
-            contextMenu.install();
+            chromeContextMenu.install();
         </script>
     </body>
 </html>

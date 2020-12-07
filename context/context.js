@@ -85,7 +85,33 @@ class ContextMenu {
             menu.parent = this;
 
             const openSubItems = e => {
-                if (item.classList.contains('disabled'))
+                if (data.hasOwnProperty('disabled') && data['disabled'] == true)
+                    return;
+
+                this.hideSubMenus();
+
+                const x = this.dom.offsetLeft + this.dom.clientWidth + item.offsetLeft;
+                const y = this.dom.offsetTop + item.offsetTop;
+
+                if (!menu.shown) {
+                    menu.show(x, y);
+                } else {
+                    menu.hide();
+                }
+            };
+
+            this.submenus.push(menu);
+
+            item.classList.add('has-subitems');
+            item.addEventListener('click', openSubItems);
+            item.addEventListener('mousemove', openSubItems);
+        } else if (data.hasOwnProperty('submenu') && data['submenu'] instanceof ContextMenu) {
+            const menu = data['submenu'];
+            menu.root = false;
+            menu.parent = this;
+
+            const openSubItems = e => {
+                if (data.hasOwnProperty('disabled') && data['disabled'] == true)
                     return;
 
                 this.hideSubMenus();
