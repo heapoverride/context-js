@@ -2,7 +2,8 @@
 (image: fake context-menu for Chrome, dark theme)
 
 # About
-Context.js is a context-menu library for web and of course written in JavaScript.
+Context.js is a context-menu library for web and of course written in JavaScript.\
+You can try out this [demo](https://heapoverride.sexy/contextjs).
 
 # Installation
 ### Step 1
