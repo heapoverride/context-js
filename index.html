@@ -20,6 +20,12 @@
                 e.handled = true;
             };
 
+            const skinsContextMenu = new ContextMenu(document.body, [
+                {text: 'Chrome Dark', value: 'chrome-dark', onclick: skinActivator},
+                {text: 'Chrome Bright', value: 'chrome-bright', onclick: skinActivator},
+                {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
+            ]);
+
             const kaliContextMenu = new ContextMenu(document.body, [
                 {text: 'Information Gathering', hotkey: '❯', subitems: [
                     {text: 'DNS Analysis', hotkey: '❯', subitems: [
@@ -96,11 +102,7 @@
                     e.label.innerText = 'Clicked!';
                     e.data.text = e.label.innerText;
                 }},
-                {text: 'Skins', hotkey: '❯', subitems: [
-                    {text: 'Chrome Dark', value: 'chrome-dark', onclick: skinActivator},
-                    {text: 'Chrome Bright', value: 'chrome-bright', onclick: skinActivator},
-                    {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
-                ]}
+                {text: 'Skins', hotkey: '❯', submenu: skinsContextMenu}
             ]);
             
             const chromeContextMenu = new ContextMenu(document.body, [
@@ -117,11 +119,7 @@
                 {text: 'Inspect', hotkey: 'Ctrl+Shift+I'},
                 null,
                 {text: 'Kali tools', hotkey: '❯', submenu: kaliContextMenu},
-                {text: 'Skins', hotkey: '❯', subitems: [
-                    {text: 'Chrome Dark', value: 'chrome-dark', onclick: skinActivator},
-                    {text: 'Chrome Bright', value: 'chrome-bright', onclick: skinActivator},
-                    {text: 'Hackerman', value: 'hackerman', onclick: skinActivator}
-                ]}
+                {text: 'Skins', hotkey: '❯', submenu: skinsContextMenu}
             ]);
 
             chromeContextMenu.install();
