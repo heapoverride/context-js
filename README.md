@@ -82,3 +82,5 @@ ContextMenu.uninstall()
 ![chrome-bright](https://i.ibb.co/bzB3sPb/image.png)
 ### hackerman.css
 ![chrome-bright](https://i.ibb.co/nwtjHqx/image.png)
+### kali_dark.css
+![kali_dark](https://i.ibb.co/bLDfxcF/image.png)
