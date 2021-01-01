@@ -20,9 +20,13 @@ class ContextMenu {
 
         this._oncontextmenu = e => {
             e.preventDefault();
-
-            this.hideAll();
-            this.show(e.clientX, e.clientY);
+			if (e.target != this.dom && 
+                e.target.parentElement != this.dom && 
+                !e.target.classList.contains('item') && 
+                !e.target.parentElement.classList.contains('item')) {
+				this.hideAll();
+				this.show(e.clientX, e.clientY);
+            }
         };
 
         this._oncontextmenu_keydown = e => {
